@@ -13,7 +13,7 @@ class Cliente(models.Model):
     def __str__(self):
         return f"{self.nombre} ({self.rut})"
 
-# 2. MODELO TALLER (Pedido por la Rúbrica)
+# 2. MODELO TALLER 
 # Define el área donde se realiza el trabajo.
 class Taller(models.Model):
     AREAS_CHOICES = [
@@ -42,7 +42,7 @@ class Vehiculo(models.Model):
         return f"{self.marca} {self.modelo} ({self.patente})"
 
 # 4. MODELO MANTENCION (La Orden de Trabajo)
-# Aquí ocurre la magia. Puede ser a un vehículo O a una pieza suelta.
+# Puede ser a un vehículo O a una pieza suelta.
 class Mantencion(models.Model):
     # Estados del trabajo
     ESTADOS = [
@@ -54,7 +54,7 @@ class Mantencion(models.Model):
         ('ENTR', 'Entregado'),
     ]
 
-    # Tipos de Servicio (Lo que me contaste)
+    # Tipos de Servicio 
     TIPOS_SERVICIO = [
         ('PREV', 'Mantención Preventiva'),
         ('INY', 'Reparación/Calibración Inyectores'),

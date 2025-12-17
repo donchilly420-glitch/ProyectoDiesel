@@ -14,7 +14,7 @@ class VehiculoAdmin(admin.ModelAdmin):
     search_fields = ('patente', 'vin', 'cliente__nombre')
     list_filter = ('marca',)
 
-# Configuración para la MANTENCION (La más importante)
+# Configuración para la MANTENCION 
 @admin.register(Mantencion)
 class MantencionAdmin(admin.ModelAdmin):
     # Qué columnas se ven en la lista

@@ -35,10 +35,10 @@ class MantencionViewSet(viewsets.ModelViewSet):
     serializer_class = MantencionSerializer
     permission_classes = [permissions.IsAuthenticated]
     
-    # --- AQUÍ CUMPLIMOS LA RÚBRICA (Filtros) ---
+    # --- Filtros ---
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     
-    # Filtros exactos pedidos: Tipo mantención, fecha y kilometraje
+    # Filtros pedidos: Tipo mantención, fecha y kilometraje
     filterset_fields = {
         'tipo_servicio': ['exact'],
         'fecha_ingreso': ['gte', 'lte'], # Filtrar por rango de fechas (desde/hasta)

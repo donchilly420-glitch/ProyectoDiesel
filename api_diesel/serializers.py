@@ -12,7 +12,7 @@ class TallerSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class VehiculoSerializer(serializers.ModelSerializer):
-    # Aquí un truco: Queremos ver el nombre del cliente, no solo su número ID
+    # Queremos ver el nombre del cliente
     nombre_cliente = serializers.ReadOnlyField(source='cliente.nombre')
 
     class Meta:

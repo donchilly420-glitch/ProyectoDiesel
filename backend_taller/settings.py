@@ -128,7 +128,7 @@ STATIC_URL = 'static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',  # <--- CRUCIAL: Permite usar Tokens
-        'rest_framework.authentication.SessionAuthentication', # Permite usar el Admin y Swagger
+        'rest_framework.authentication.TokenAuthentication',  
+        'rest_framework.authentication.SessionAuthentication',
     ],
 }
